@@ -113,10 +113,4 @@ Run the script with your own queries
 📬 License
 This project is open source and available under the MIT License.
 
-yaml
-Copy
-Edit
-
----
-
 Let me know if you'd like the `LICENSE` file or GitHub repo structure suggestion
