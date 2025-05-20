@@ -30,7 +30,7 @@ faq_data = {
     "Can I return a product?": "You can return a product within 7 days of delivery.",
     ...
 }
-## ⚙️ How It Works
+⚙️ How It Works
 TF-IDF Vectorization: Converts FAQ questions and user query into numerical vectors.
 
 Cosine Similarity: Measures how similar the user query is to each stored FAQ.
@@ -39,7 +39,7 @@ Best Match Detection: Finds the most similar question and returns the correspond
 
 Threshold Filtering: If similarity score is too low (below 0.4), the assistant returns a default message.
 
-##🧪 Sample Usage
+🧪 Sample Usage
 
 print(get_faq_answer("Do you offer delivery?"))
 # Output: Yes, we provide delivery service for all orders above 500 BDT.
@@ -77,19 +77,19 @@ Computes cosine similarity between the query and each FAQ.
         return "Sorry, I couldn’t find a suitable answer to your question."
 If similarity is above threshold, return matched answer. Otherwise, show default message.
 
-## ✅ Requirements
+ ✅ Requirements
 Install required libraries using pip:
 
 bash
 pip install scikit-learn
-## 🚀 How to Run
+ 🚀 How to Run
 Clone this repo
 
 Install dependencies
 
 Run the script with your own queries
 
-## 📬 License
+ 📬 License
 This project is open source and available under the MIT License.
 
 Let me know if you'd like the `LICENSE` file or GitHub repo structure suggestion
