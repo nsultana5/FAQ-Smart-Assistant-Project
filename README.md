@@ -30,7 +30,7 @@ faq_data = {
     "Can I return a product?": "You can return a product within 7 days of delivery.",
     ...
 }
-⚙️ How It Works
+## ⚙️ How It Works
 TF-IDF Vectorization: Converts FAQ questions and user query into numerical vectors.
 
 Cosine Similarity: Measures how similar the user query is to each stored FAQ.
@@ -39,10 +39,8 @@ Best Match Detection: Finds the most similar question and returns the correspond
 
 Threshold Filtering: If similarity score is too low (below 0.4), the assistant returns a default message.
 
-🧪 Sample Usage
-python
-Copy
-Edit
+##🧪 Sample Usage
+
 print(get_faq_answer("Do you offer delivery?"))
 # Output: Yes, we provide delivery service for all orders above 500 BDT.
 
@@ -54,63 +52,44 @@ print(get_faq_answer("Can I return a product?"))
 
 print(get_faq_answer("Do you sell mobile phones?"))
 # Output: Sorry, I couldn’t find a suitable answer to your question.
-🧾 Code Explanation
-python
-Copy
-Edit
+## 🧾 Code Explanation
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 Imports TF-IDF and similarity tools from scikit-learn.
 
-python
-Copy
-Edit
 faq_data = { ... }
 Dictionary mapping FAQ questions to answers.
 
-python
-Copy
-Edit
 def get_faq_answer(user_query: str) -> str:
 Main function to handle user queries.
 
-python
-Copy
-Edit
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(questions + [user_query])
 Converts questions and query into TF-IDF vectors.
 
-python
-Copy
-Edit
     similarity_scores = cosine_similarity(tfidf_matrix[-1], tfidf_matrix[:-1])
 Computes cosine similarity between the query and each FAQ.
 
-python
-Copy
-Edit
     if best_match_score >= 0.4:
         return faq_data[matched_question]
     else:
         return "Sorry, I couldn’t find a suitable answer to your question."
 If similarity is above threshold, return matched answer. Otherwise, show default message.
 
-✅ Requirements
+## ✅ Requirements
 Install required libraries using pip:
 
 bash
-Copy
-Edit
 pip install scikit-learn
-🚀 How to Run
+## 🚀 How to Run
 Clone this repo
 
 Install dependencies
 
 Run the script with your own queries
 
-📬 License
+## 📬 License
 This project is open source and available under the MIT License.
 
 Let me know if you'd like the `LICENSE` file or GitHub repo structure suggestion
